@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: 100;
+    color: wheat;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #E40303 16.66%, #FF8C00 16.66%, #FF8C00 33.33%, #FFED00 33.33%, #FFED00 50%, #008026 50%, #008026 66.66%, #004DFF 66.66%, #004DFF 83.33%, #750787 83.33%);
+  }
+   
+ 
+
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(179, 242, 207);
+  }
+
+  .input-field {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 5px;
+  }
+</style>
+<title>Confession page</title>
+</head>
+<body>
+  <div>
+    <h1>Make Your Confession</h1>
+  </div>
+  <div class="rainbow"></div>
+  <div class="input-box">
+    <input class="input-field" type="text" placeholder="Your confession...">
+    <button class="input-field" onclick="submitConfession()">Submit</button>
+  </div>
+
+  <script>
+    function submitConfession() {
+      const confession = document.querySelector('.input-field').value;
+      if (confession) {
+        // You can perform actions with the confession, like sending it to a server or displaying it on the page.
+        console.log('Confession submitted:', confession);
+        // You can also clear the input field after submission
+        document.querySelector('.input-field').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
